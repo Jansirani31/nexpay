@@ -1,0 +1,68 @@
+.security { background: var(--bg2); }
+.securityGrid {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: clamp(40px,6vw,80px); align-items: center;
+}
+@media (max-width: 900px) { .securityGrid { grid-template-columns: 1fr; } }
+
+.secVisual { position: relative; height: clamp(280px,40vw,500px); }
+@media (max-width: 900px) { .secVisual { order: -1; height: 260px; } }
+.secHexGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(6 * 44px + 5 * 4px); 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-content: flex-start; 
+  opacity: 0.15;
+  overflow: hidden; 
+}
+
+.hex {
+  width: 38px; height: 44px;
+  background: var(--border2);
+  clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  transition: background .3s;
+}
+.hexActive { background: var(--gold); opacity: .8; }
+
+.secBadge {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%,-50%); text-align: center;
+}
+.secRing {
+  width: 180px; height: 180px; border-radius: 50%;
+  border: 1px solid rgba(232,163,42,.2);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.secRing::before {
+  content: ''; position: absolute; inset: -20px; border-radius: 50%;
+  border: 1px solid rgba(232,163,42,.08);
+  animation: spinRing 20s linear infinite;
+}
+.secRing::after {
+  content: ''; position: absolute; inset: -40px; border-radius: 50%;
+  border: 1px dashed rgba(0,201,167,.12);
+  animation: spinRing 30s linear infinite reverse;
+}
+.secIconBig { font-size: 56px; line-height: 1; }
+
+.secFeatures { display: flex; flex-direction: column; gap: 16px; }
+.secFeat {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 12px;
+  transition: border-color .3s;
+}
+.secFeat:hover { border-color: rgba(0,201,167,.3); }
+.secFeatIcon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  background: rgba(0,201,167,.08); border: 1px solid rgba(0,201,167,.15);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.secFeatTitle { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 5px; }
+.secFeatText { font-size: 12px; color: var(--muted2); line-height: 1.6; }

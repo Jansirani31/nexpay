@@ -1,0 +1,226 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 40px) clamp(20px,5vw,60px) 60px;
+  overflow: hidden;
+}
+.heroBg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.heroGrid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 80%);
+}
+.heroOrb {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px);
+  animation: orbFloat 10s ease-in-out infinite alternate;
+}
+.orb1 {
+  width: min(700px,100vw); height: min(700px,100vw);
+  background: radial-gradient(circle, rgba(232,163,42,.12) 0%, transparent 70%);
+  top: -200px; right: -100px;
+}
+.orb2 {
+  width: min(500px,80vw); height: min(500px,80vw);
+  background: radial-gradient(circle, rgba(0,201,167,.08) 0%, transparent 70%);
+  bottom: -100px; left: 20%; animation-delay: -4s;
+}
+.orb3 {
+  width: min(300px,60vw); height: min(300px,60vw);
+  background: radial-gradient(circle, rgba(232,163,42,.06) 0%, transparent 70%);
+  top: 30%; left: -50px; animation-delay: -7s;
+}
+
+.heroInner {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1400px; margin: 0 auto; width: 100%;
+}
+@media (max-width: 1024px) { .heroInner { grid-template-columns: 1fr; gap: 40px; } }
+
+.heroLabel {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(232,163,42,.08);
+  border: 1px solid rgba(232,163,42,.2);
+  padding: 6px 14px; border-radius: 100px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px; color: var(--gold);
+  letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: 24px;
+  animation: fadeUp .7s .2s ease both;
+}
+.labelDot {
+  width: 6px; height: 6px;
+  background: var(--teal); border-radius: 50%;
+  animation: blink 2s infinite;
+}
+.heroH1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(40px,6vw,78px);
+  line-height: 1.05; font-weight: 400;
+  color: var(--white); margin-bottom: 20px;
+  animation: fadeUp .8s .4s ease both;
+}
+.heroH1 em { font-style: italic; color: var(--gold); }
+.line2 { color: var(--muted2); font-style: italic; }
+.heroSub {
+  font-size: clamp(14px,1.5vw,16px);
+  line-height: 1.7; color: var(--muted2);
+  max-width: 500px; margin-bottom: 36px;
+  animation: fadeUp .8s .6s ease both;
+}
+.heroCtas {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  animation: fadeUp .8s .8s ease both;
+}
+.heroBadges {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px;
+  animation: fadeUp .8s 1s ease both;
+}
+.badge {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  padding: 7px 14px; border-radius: 6px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 10px; color: var(--muted2); letter-spacing: .06em;
+  transition: border-color .2s, color .2s;
+}
+.badge:hover { border-color: rgba(232,163,42,.3); color: var(--white); }
+
+/* Hero visual */
+.heroVisual {
+  position: relative;
+  animation: fadeIn 1.2s .6s ease both;
+}
+@media (max-width: 1024px) { .heroVisual { max-width: 480px; margin: 0 auto; width: 100%; } }
+
+.conversionCard {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 20px;
+  padding: clamp(20px,4vw,32px);
+  position: relative; overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,.5), 0 0 0 1px var(--border);
+}
+.conversionCard::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.cardHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.cardTitle { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+.liveBadge {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(0,201,167,.1); border: 1px solid rgba(0,201,167,.2);
+  padding: 4px 10px; border-radius: 100px;
+  font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--teal);
+}
+.liveDot { width: 5px; height: 5px; background: var(--teal); border-radius: 50%; animation: blink 1.5s infinite; }
+.convFrom, .convTo { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+.convLabel { font-family: 'Geist Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 10px; }
+.convRow { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.convAmount { font-family: 'Geist Mono', monospace; font-size: clamp(22px,4vw,32px); font-weight: 600; color: var(--white); }
+.convCurrency {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--surface2); border: 1px solid var(--border);
+  padding: 7px 12px; border-radius: 8px;
+  font-family: 'Geist Mono', monospace; font-size: 12px; font-weight: 500; white-space: nowrap;
+}
+.currencyFlag { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+.flagInr { background: linear-gradient(135deg,#FF9933,#138808); }
+.flagUsdt { background: linear-gradient(135deg,#26A17B,#1A7A5E); }
+.convArrow{
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:40px 0;
+}
+
+.arrowLine{
+  position:absolute;
+  left:0;
+  right:0;
+  height:1px;
+  background:linear-gradient(90deg,var(--border),var(--gold),var(--border));
+}
+
+.arrowIcon{
+  width:34px;
+  height:34px;
+  background:var(--gold);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  color:#05080D;
+  z-index:1;
+  animation:arrowPulse 2s ease-in-out infinite;
+}
+.convRate { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-top: 1px solid var(--border); margin-top: 16px; }
+.convRateNoTop { padding-top: 8px; border-top: none; margin-top: -10px; }
+.rateLabel { font-family: 'Geist Mono', monospace; font-size: 11px; color: var(--muted); }
+.rateValue { font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--gold); font-weight: 500; }
+.convBtn {
+  width: 100%; background: var(--gold); color: #05080D;
+  border: none; border-radius: 10px; padding: 15px;
+  font-family: 'Geist Mono', monospace; font-size: 12px;
+  font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  margin-top: 16px; transition: background .2s, box-shadow .3s;
+  position: relative; overflow: hidden;
+}
+.convBtn:hover { background: var(--gold2); box-shadow: 0 0 30px rgba(232,163,42,.4); }
+.convBtn:active { transform: scale(.98); }
+
+.floatCard {
+  position: absolute;
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 12px; padding: 10px 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.4);
+  animation: floatCard 4s ease-in-out infinite alternate;
+}
+.float1 { top: -18px; right: -20px; animation-delay: 0s; }
+.float2 { bottom: 30px; left: -30px; animation-delay: -2s; transform: translate(2px, -2px)}
+@media (max-width: 480px) { .float1 { top: -10px; right: -10px; } .float2 { bottom: 20px; left: -10px; } }
+.floatLabel { font-family: 'Geist Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px; }
+.floatVal { font-family: 'Geist Mono', monospace; font-size: 15px; font-weight: 600; }
+.up { color: var(--teal); }
+.warn { color: var(--gold); }
+@keyframes floatCard {
+  0%   { transform: translate(2px, -2px); }
+  50%  { transform: translate(0px, -4px); }
+  100% { transform: translate(2px, -2px); }
+}
+.labelDot, .liveDot {
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+  animation: pulseZoom 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseZoom {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,36 @@
+.tickerWrap {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 11px 0;
+  overflow: hidden;
+  position: relative; z-index: 2;
+}
+.tickerInner {
+  display: flex; gap: 50px;
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+  width: max-content;
+  display: flex;
+  width: max-content;
+  animation: tickerMove 20s linear infinite;
+}
+.tickerItem { display: flex; align-items: center; gap: 8px; font-family: 'Geist Mono', monospace; font-size: 11px;
+align-items:center;
+  gap:10px;
+  margin-right:30px;
+  white-space:nowrap; }
+.tName { color: var(--muted2); }
+.tPrice { color: var(--white); font-weight: 500; }
+.tChange { font-size: 10px; padding: 2px 6px; border-radius: 4px; }
+.tUp { background: rgba(0,201,167,.1); color: var(--teal); }
+.tDown { background: rgba(255,77,106,.1); color: var(--red); }
+.tickerSep { color: var(--muted); }
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,21 @@
+.otc { background: var(--bg); }
+.otcGrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(40px,6vw,80px); align-items: center;
+}
+@media (max-width: 900px) { .otcGrid { grid-template-columns: 1fr; } }
+
+.otcCards { display: flex; flex-direction: column; gap: 14px; }
+.otcCard {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: clamp(16px,2.5vw,24px) clamp(18px,3vw,28px);
+  display: flex; gap: 14px; align-items: flex-start;
+  transition: border-color .3s, transform .2s;
+}
+.otcCard:hover { border-color: rgba(232,163,42,.25); transform: translateX(4px); }
+.otcCardNum {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  color: var(--muted); letter-spacing: .1em; padding-top: 2px; flex-shrink: 0;
+}
+.otcCardText { font-size: 13px; color: var(--muted2); line-height: 1.6; }
+.otcCardText strong { color: var(--white); font-weight: 600; display: block; margin-bottom: 3px; }

@@ -1,0 +1,29 @@
+.steps { background: var(--bg2); }
+.stepsHeader { text-align: center; margin-bottom: clamp(40px,6vw,70px); }
+.stepsTrack {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; position: relative;
+}
+.stepsTrack::before {
+  content: ''; position: absolute;
+  top: 48px; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(90deg, var(--border), var(--gold), var(--gold), var(--border));
+}
+@media (max-width: 768px) {
+  .stepsTrack { grid-template-columns: repeat(2,1fr); gap: 30px 0; }
+  .stepsTrack::before { display: none; }
+}
+@media (max-width: 400px) { .stepsTrack { grid-template-columns: 1fr; } }
+
+.stepItem { padding: 0 16px; text-align: center; position: relative; }
+.stepNum {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--surface2); border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Geist Mono', monospace; font-size: 13px; font-weight: 600; color: var(--gold);
+  margin: 0 auto 20px; position: relative; z-index: 1;
+  transition: background .3s, box-shadow .3s;
+}
+.stepItem:hover .stepNum { background: var(--gold); color: #05080D; box-shadow: 0 0 30px rgba(232,163,42,.4); }
+.stepTitle { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.stepText { font-size: 12px; color: var(--muted2); line-height: 1.6; }

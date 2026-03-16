@@ -1,0 +1,44 @@
+.convert { background: var(--bg2); text-align: center; }
+.convertBg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(0,201,167,.06) 0%, transparent 60%);
+}
+.convertInner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+.convertFlow {
+  display: flex; align-items: center; justify-content: center;
+  gap: clamp(10px,3vw,24px);
+  margin: clamp(30px,5vw,50px) 0;
+  flex-wrap: wrap;
+}
+.convPill {
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 100px; padding: 14px clamp(18px,4vw,32px);
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Geist Mono', monospace;
+  font-size: clamp(14px,2vw,18px); font-weight: 600;
+}
+.inr { color: var(--gold); border-color: rgba(232,163,42,.3); }
+.usdt { color: var(--teal); border-color: rgba(0,201,167,.3); }
+.convArrowBig {
+  font-size: clamp(20px,3vw,28px); color: var(--muted);
+  animation: arrowBounds 1.5s ease-in-out infinite;
+}
+@keyframes arrowBounds {
+
+  0%{
+    transform: translateX(0);
+    color: var(--muted);
+  }
+
+  50%{
+    transform: translateX(10px);
+    color: var(--gold);
+  }
+
+  100%{
+    transform: translateX(0);
+    color: var(--muted);
+  }
+
+}
+
