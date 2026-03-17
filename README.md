@@ -8,4 +8,4 @@ Simple crypto website UI
 - Responsive design
 
 ## Live
-nexpay-git-main-jansiraniramesh31-5690s-projects.vercel.app
+https://nexpay-sandy.vercel.app/
