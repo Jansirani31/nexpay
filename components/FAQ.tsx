@@ -40,7 +40,6 @@ export default function FAQ() {
             <p className="section-sub" style={{ marginBottom: 28 }}>
               Everything you need to know about NexPay OTC trading.
             </p>
-            <a href="#" className="btn-ghost">View All FAQs →</a>
           </div>
           <div className={`${styles.faqList} reveal reveal-delay-1`}>
             {FAQS.map((item, i) => (
