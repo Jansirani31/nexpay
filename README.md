@@ -8,4 +8,4 @@ Simple crypto website UI
 - Responsive design
 
 ## Live
-https://your-link.vercel.app
+http://localhost:3000
