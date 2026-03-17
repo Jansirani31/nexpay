@@ -8,4 +8,4 @@ Simple crypto website UI
 - Responsive design
 
 ## Live
-http://localhost:3000
+nexpay-git-main-jansiraniramesh31-5690s-projects.vercel.app
