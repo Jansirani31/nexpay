@@ -42,7 +42,7 @@ export default function WhyChoose() {
         <div className={styles.whyGrid}>
           <div className="reveal">
             <span className="section-label">Why NexPay OTC</span>
-            <h2 className="section-h2">The Smarter Way<br />to <em>Trade OTC</em></h2>
+            <h2 className={`${styles.sectionH2} reveal`}>The Smarter Way<br />to <em>Trade OTC</em></h2>
             <p className="section-sub" style={{ marginBottom: 36 }}>
               Secure and transparent infrastructure for both institutional and individual trades.
             </p>

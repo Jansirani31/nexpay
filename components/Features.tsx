@@ -16,7 +16,7 @@ export default function Features() {
         <div className={styles.featuresHeader}>
           <div className="reveal">
             <span className="section-label">Core Features</span>
-            <h2 className="section-h2">Explore Our<br /><em>Core Capabilities</em></h2>
+            <h2 className={`${styles.sectionH2} reveal`}>Explore Our<br /><em>Core Capabilities</em></h2>
           </div>
           <div className="reveal reveal-delay-1">
             <p className="section-sub">

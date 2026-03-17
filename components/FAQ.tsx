@@ -34,7 +34,9 @@ export default function FAQ() {
         <div className={styles.faqLayout}>
           <div className={`${styles.faqSticky} reveal`}>
             <span className="section-label">FAQ</span>
-            <h2 className="section-h2">Frequently<br /><em>Asked</em></h2>
+            <h2 className={`${styles.finalH2} reveal`}>
+  Frequently<br /><em>Asked</em>
+</h2>
             <p className="section-sub" style={{ marginBottom: 28 }}>
               Everything you need to know about NexPay OTC trading.
             </p>

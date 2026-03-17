@@ -13,7 +13,7 @@ export default function OTCDesk() {
         <div className={styles.otcGrid}>
           <div className="reveal">
             <span className="section-label">OTC Desk for Large Trades</span>
-            <h2 className="section-h2">Trade <em>Large.</em><br />Trade Smart.</h2>
+            <h2 className={`${styles.sectionH2} reveal`}>Trade <em>Large.</em><br />Trade Smart.</h2>
             <p className="section-sub" style={{ marginBottom: 32 }}>
               Dedicated desk for high-volume traders and institutional clients.
               Execute large INR orders without price impact.

@@ -16,7 +16,7 @@ export default function Liquidity() {
           <div className="reveal">
             <div className={styles.liqPercent}><span>2</span>%</div>
             <span className="section-label">Liquidity Providers</span>
-            <h2 className="section-h2">Earn on<br /><em>Every Swap</em></h2>
+            <h2 className={`${styles.sectionH2} reveal`}>Earn on<br /><em>Every Swap</em></h2>
             <p className="section-sub" style={{ marginBottom: 36 }}>
               Provide liquidity to NexPay and earn 2% on every swap executed through your pool.
             </p>

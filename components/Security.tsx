@@ -32,7 +32,7 @@ export default function Security() {
         <div className={styles.securityGrid}>
           <div className="reveal">
             <span className="section-label">Secure &amp; Transparent</span>
-            <h2 className="section-h2">Built on<br /><em>Trust &amp; Proof</em></h2>
+           <h2 className={`${styles.sectionH2} reveal`}>Built on<br /><em>Trust &amp; Proof</em></h2>
             <p className="section-sub" style={{ marginBottom: 36 }}>
               Every layer of NexPay is designed around security, auditability, and transparent market pricing.
             </p>

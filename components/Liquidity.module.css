@@ -35,7 +35,19 @@
 }
 .liqCardNum {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(26px,4vw,36px); color: var(--gold); margin-bottom: 4px;
+  font-size: clamp(30px,5vw,40px); color: var(--gold); margin-bottom: 4px;
 }
 .liqCardNum.teal { color: var(--teal); }
-.liqCardLabel { font-size: 12px; color: var(--muted2); }
+.liqCardLabel { font-size: 16px; color: var(--muted2); }
+.sectionH2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.sectionH2 em {
+  font-style: italic;
+  color: var(--gold);
+}

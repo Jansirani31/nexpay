@@ -20,10 +20,24 @@
   width: 54px; height: 54px; border-radius: 50%;
   background: var(--surface2); border: 1px solid var(--border2);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Geist Mono', monospace; font-size: 13px; font-weight: 600; color: var(--gold);
+  font-family: 'Geist Mono', monospace; font-size: 16px; font-weight: 600; color: var(--gold);
   margin: 0 auto 20px; position: relative; z-index: 1;
   transition: background .3s, box-shadow .3s;
 }
 .stepItem:hover .stepNum { background: var(--gold); color: #05080D; box-shadow: 0 0 30px rgba(232,163,42,.4); }
 .stepTitle { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
 .stepText { font-size: 12px; color: var(--muted2); line-height: 1.6; }
+.sectionH2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.sectionH2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+

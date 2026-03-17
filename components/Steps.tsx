@@ -13,7 +13,7 @@ export default function Steps() {
       <div className="inner">
         <div className={`${styles.stepsHeader} reveal`}>
           <span className="section-label">Trade in 4 Simple Steps</span>
-          <h2 className="section-h2">From INR to <em>Crypto</em><br />in Minutes</h2>
+          <h2 className={`${styles.sectionH2} reveal`}>From INR to <em>Crypto</em><br />in Minutes</h2>
           <p className="section-sub" style={{ margin: '0 auto' }}>Streamlined process — maximum speed, minimum friction.</p>
         </div>
         <div className={styles.stepsTrack}>

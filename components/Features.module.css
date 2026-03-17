@@ -29,10 +29,23 @@
 .fiGold { background: rgba(232,163,42,.1); border: 1px solid rgba(232,163,42,.2); }
 .fiTeal { background: rgba(0,201,167,.1); border: 1px solid rgba(0,201,167,.2); }
 .fiWhite { background: rgba(240,242,245,.06); border: 1px solid rgba(240,242,245,.1); }
-.featTitle { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
-.featText { font-size: 13px; color: var(--muted2); line-height: 1.65; }
+.featTitle { font-size: 18px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.featText { font-size: 14px; color: var(--muted2); line-height: 1.65; }
 .featTag {
   position: absolute; top: 18px; right: 18px;
   font-family: 'Geist Mono', monospace; font-size: 9px;
   color: var(--muted); letter-spacing: .1em; text-transform: uppercase;
+}
+.sectionH2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(36px, 5.5vw, 72px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.sectionH2 em {
+  font-style: italic;
+  color: var(--gold);
 }

@@ -8,9 +8,7 @@ export default function Convert() {
         <span className="section-label reveal" style={{ display: 'block', textAlign: 'center' }}>
           Rupee In · USDT Out
         </span>
-        <h2 className={`section-h2 reveal`} style={{ textAlign: 'center' }}>
-          Convert <em>₹ INR</em> to<br />USDT Seamlessly
-        </h2>
+        <h2 className={`${styles.sectionH2} reveal ${styles.center}`}>Convert <em>₹ INR</em> to<br />USDT Seamlessly</h2>
         <div className={`${styles.convertFlow} reveal reveal-delay-1`}>
           <div className={`${styles.convPill} ${styles.inr}`}><span>🇮🇳</span>₹ INR</div>
           <div className={styles.convArrowBig}>→</div>
