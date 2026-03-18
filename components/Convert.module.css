@@ -43,7 +43,7 @@
 }
 .sectionH2 {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(36px, 5.5vw, 72px);
+  font-size: 72px;
   font-weight: 400;
   line-height: 1.05;
   color: var(--white);
@@ -53,6 +53,11 @@
 .sectionH2 em {
   font-style: italic;
   color: var(--gold);
+}
+@media (max-width: 768px) {
+  .sectionH2 {
+    font-size: 48px; 
+  }
 }
 .center {
   text-align: center;

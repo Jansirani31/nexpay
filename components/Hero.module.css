@@ -62,7 +62,7 @@
 }
 .heroH1 {
   font-family: 'Instrument Serif', serif;
-  font-size: clamp(40px,6vw,78px);
+  font-size: clamp(48px,12vw,90px);
   line-height: 1.05; font-weight: 400;
   color: var(--white); margin-bottom: 20px;
   animation: fadeUp .8s .4s ease both;
@@ -72,9 +72,10 @@
 .heroSub {
   font-size: clamp(14px,1.5vw,16px);
   line-height: 1.7; color: var(--muted2);
-  max-width: 500px; margin-bottom: 36px;
+  max-width: 100%; margin-bottom: 36px;
   animation: fadeUp .8s .6s ease both;
 }
+
 .heroCtas {
   display: flex; gap: 12px; flex-wrap: wrap;
   animation: fadeUp .8s .8s ease both;
@@ -234,4 +235,10 @@
  100%{
    transform:scale(1);
  }
+}
+@media (max-width: 768px) {
+  .heroLeft h1 {
+    font-size: 46px !important;
+    line-height: 1.05;
+  }
 }
